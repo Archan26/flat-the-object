@@ -7,11 +7,10 @@
 $ npm install flat-the-object
 ```
 
-### Usage
+### Example
 This is the practical example of how to use 
 ```js
-// const getFlattenObject = require('flat-the-object')
-const { getFlattenObject } = require("flat-the-object");
+const getFlattenObject = require('flat-the-object')
 
 const user = {
     name: "Your Name",
@@ -19,17 +18,6 @@ const user = {
         personal: {
             city: "NY",
             state: "WX",
-            coordinates: {
-                x: 35.12,
-                y: -21.49,
-            },
-        },
-        office: {
-            city: "City",
-            state: "WX",
-            area: {
-                landmark: "landmark",
-            },
             coordinates: {
                 x: 35.12,
                 y: -21.49,
@@ -54,6 +42,7 @@ const user = {
 //2. give the name and object key will start with that name
 
 console.log(getFlattenObject(user, "data"));
+
 // result will be like this:
 // {
 //   data_name: 'Your Name',
@@ -61,11 +50,6 @@ console.log(getFlattenObject(user, "data"));
 //   data_address_personal_state: 'WX',
 //   data_address_personal_coordinates_x: 35.12,
 //   data_address_personal_coordinates_y: -21.49,
-//   data_address_office_city: 'City',
-//   data_address_office_state: 'WX',
-//   data_address_office_area_landmark: 'landmark',
-//   data_address_office_coordinates_x: 35.12,
-//   data_address_office_coordinates_y: -21.49,
 //   data_contact_phone_home: 'xxx',
 //   data_contact_phone_office: 'yyy',
 //   data_contact_email_home: 'xxx',
